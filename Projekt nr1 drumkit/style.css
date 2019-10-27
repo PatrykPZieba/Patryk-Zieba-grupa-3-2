@@ -1,0 +1,43 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url("https://cdn.shopify.com/s/files/1/0129/7698/0032/articles/Free-Drum-Kits-Yoast_1024x1024.jpg?v=1552056908")
+    
+}
+.key{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.btn{
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: white;
+    border: 10px solid black;
+    margin: 0px 15px 0px 15px;
+    background: grey;
+    
+    
+}
+#keys{
+    margin: 0px 0px 40px 0;
+}
+#container{
+    text-align: center;
+    transform: translateY(300px)
+}
+div#recordButtons button{
+    margin-left: 10px;
+    margin-right: 10px;
+}    
+kbd{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    transform: translate(0,50%);
+    
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #canvas{
+            position: absolute;
+            background: lightgrey;
+            top:100px;
+            width: 100%;
+            bottom:0;
+            left: 0;
+        }
+        /* .czerwone-kolo{
+            background:red;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        } */
+        /* .rysowanie{
+            height: 1px;
+            width: 5px;
+            background:black;
+        } */
+    </style>
+</head>
+<body>
+    <button id="circleBtn" >wstaw kolko </button>
+    <div id="canvas">
+
+    </div>
+
+    <script type="text/javascript"> 
+    const canvas = document.querySelector('#canvas')
+    canvas.addEventListener('touchmove' , onCanvasTouchMove)
+    function onCanvasTouchMove(e){
+        console.log(e)
+    }
+    canvas.addEventListener('touchmove' , rysuj)
+    let canvasOffSet = $('#canvas').offset();
+    // const canvas = document.querySelector('#canvas')
+    // canvas.addEventListener('touchmove' , onCanvasTouchMove)
+    // function onCanvasTouchMove(e){
+    //     console.log(e)
+    // }
+    // canvas.addEventListener('touchmove', rysuj)
+    // function rysuj(){
+    //     const newDiv = document.createElement('div')
+    //     newDiv.classList.add('rysowanie')
+    //     canvas.appendChild(newDiv)
+
+    // }
+    // document.querySelector('#circleBtn')
+    // circleBtn.addEventListener('click' , wstawKolo)
+    // const canvas = document.querySelector("#canvas")
+
+    // canvas.addEventListener('touchmove', onCanvasTouchMove)
+    // function onCanvasTouchMove(e){
+    //     console.log(e)
+    // }
+
+    // function wstawKolo(){
+
+    //     const newDiv = document.createElement('div')
+    //     newDiv.classList.add('czerwone-kolo')
+    //     canvas.appendChild(newDiv)
+    // }
+      </script>
+</body>
+</html>

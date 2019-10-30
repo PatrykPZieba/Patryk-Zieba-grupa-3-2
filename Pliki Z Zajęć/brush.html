@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bieda Photoshop</title>
+    <script src="photoshop.js"></script>
+    <style>
+    #canvas {
+        position: absolute;
+        background: lightgrey;
+        width: 100%;
+        bottom: 0;
+     }
+     .brush {
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         animation-name: dissapear;
+         animation-duration: 1s;
+         animation-delay: 2s;
+         animation-timing-function: ease-out;
+         /* animation-fill-mode: forwards; */
+         background: pink;
+     }
+    .circle {
+        border-radius: 50%;
+    }
+    .red {
+        background: red;
+    }
+    .square-brush-btn {
+        width: 25px;
+        height: 25px;
+        background: pink;
+        border: none;
+    }
+    .circle-brush-btn {
+        width: 25px;
+        height: 25px;
+        background: pink;
+        border: none;
+        border-radius: 50%;
+    }
+    @keyframes dissapear {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+    <button id="circleBrush" class="circle-brush-btn"></button>
+    <button id="squareBrush" class="square-brush-btn"></button>
+    <div id="canvas">
+
+    </div>
+    <script type="text/javascript">
+    
+    const ps = new Photoshop('canvas');
+    document.querySelector('#circleBrush')
+        .addEventListener('click',() => ps.setBrush('circle'))
+    
+    document.querySelector('#squareBrush')
+        .addEventListener('click',() => ps.setBrush('square'))
+    </script>
+</body>
+</html>

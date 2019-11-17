@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+#canvas{
+    position: absolute;
+    background: lightgray;
+
+}
+.square-brush-btn {
+   width: 25px;
+   height: 25px;
+   background: pink;
+   border: none;
+}
+.circle-brush-btn {
+   width: 25px;
+   height: 25px;
+   background: pink;
+   border: none;
+   border-radius: 50%;
+}
+button{
+    transform: translateY(400px);
+}

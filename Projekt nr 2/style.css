@@ -1,9 +1,14 @@
 body {
     margin: 0;
+    height: 100vh;
+    text-align: center;
+    background-image: url(stockvault-abstract-colorful-background268118.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #canvas{
-    position: absolute;
-    background: lightgray;
+    background: whitesmoke;
+    transform: translateY(15px);
 
 }
 .square-brush-btn {
@@ -19,6 +24,89 @@ body {
    border: none;
    border-radius: 50%;
 }
-button{
-    transform: translateY(400px);
+
+.color{
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    display: block;
+    margin: 10px auto;
+
+}
+.filter-btn{
+    width: 80px;
+    height: 30px;
+    display: block;
+    margin: 30px auto 20px auto;
+    border: 2px solid palevioletred;
+    background: pink;
+
+}
+#side-title{
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 150px;
+    display: inline-block;
+    border: 2px solid lightgreen;
+    color: black;
+    background:lightcyan;
+}
+#shape-title{
+    display: block;
+    margin:  0px auto 15px auto;
+    padding-bottom: 7px;
+    width: 150px;
+    border: 2px solid lightgreen;
+    color: black;
+    background:lightcyan;
+}
+    
+#filters{
+    float: left;
+    transform: translate(180px ,200px);
+    border: 5px solid black;
+    border-radius: 5px;
+    background:lightskyblue;
+
+    
+}
+#colors{
+    float: right;
+    transform: translate(-180px ,200px);
+    border: 5px solid black;
+    background: lightskyblue;
+}
+#line{
+    height: 25px;
+    width: 50px;
+    background: black;
+    border: 0;
+}
+#circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 0px;
+    background: red;
+}
+#rectangle{
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background: blue;
+}
+#shapes{
+    transform: translateY(20px);
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    border: 5px solid black;
+    background: lightskyblue;
+}
+.clear{
+    clear: both;
+}
+.shape-btn{
+    margin: 5px 10px
 }

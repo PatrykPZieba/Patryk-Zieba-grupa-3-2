@@ -6,13 +6,38 @@
     <title>Canvas paint</title>
     <link rel="stylesheet"type='text/css' href="style.css">
    
-    
+
 </head>
 <body>
-    <canvas id="canvas" width="800" height="600"></canvas>
-    <button id="darken">Ściemnij</button>
-    <button id="brighten">rozjaśnij</button>
-    <button id="contrast">kontrast</button>
+        <div id="filters">
+                <p id="side-title"><b>Choose Filter</b></p>
+                <button class="filter-btn" id="darken">Ściemnij</button>
+                <button class="filter-btn" id="brighten">rozjaśnij</button>
+                <button class="filter-btn" id="contrast">kontrast</button>
+                <button class="filter-btn" id="blur">rozmycie</button>
+                <button class="filter-btn" id="clear">clear</button>
+        </div>
+        <div id="colors">
+                <p id="side-title"><b>Choose Color</b></p>
+                <button style="background:green;" class="color" id="green" onclick="color(this)"></button>
+                <button style="background:blue;" id="blue" class="color" onclick="color(this)"></button>
+                <button style="background:red;" id="red"class="color" onclick="color(this)"></button>
+                <button style="background:yellow;" id="yellow" class="color" onclick="color(this)"></button>
+                <button style="background:orange;" id="orange" class="color" onclick="color(this)"></button>
+                <button style="background:black;" id="black" class="color" onclick="color(this)"></button>
+                <button style="background:white;" class="color" id="white"  onclick="color(this)"></button>
+        </div>
+
+            <canvas id="canvas"></canvas>
+            <div id="clear"></div>
+    <div id="shapes">
+            <p id="shape-title"><b>Choose Drawing Shape</b></p>
+            <button class="shape-btn" id="line" onclick="clickState=0"></button>
+            <button class="shape-btn" id='circle' onclick="clickState=1"></button>
+            <button class="shape-btn" id='rectangle' onclick="clickState=2"></button>
+    </div>
+    
+        
 
     <script src="java.js" type="text/javascript"></script>
     

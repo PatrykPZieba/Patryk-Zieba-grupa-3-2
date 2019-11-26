@@ -1,43 +1,103 @@
 body{
-    height: 100vh;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image:url("https://cdn.shopify.com/s/files/1/0129/7698/0032/articles/Free-Drum-Kits-Yoast_1024x1024.jpg?v=1552056908")
-    
+background-image: url(https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/drums-beat.png?itok=vhr6E_f1);
+background-repeat: no-repeat;
+background-size:cover;
 }
-.key{
-    display: inline-block;
-    width: 0;
-    height: 0;
-    opacity: 0;
+#web{
+    margin-top:10%;
+    margin-left:35%;
 }
-.btn{
-    display: inline-block;
-    width: 100px;
+#play{
+    background: green;
+}
+.sounds{
+    display:none;
+}
+.icons{
+    width: 80px;
     height: 80px;
-    color: white;
-    border: 10px solid black;
-    margin: 0px 15px 0px 15px;
-    background: grey;
-    
-    
 }
-#keys{
-    margin: 0px 0px 40px 0;
+.icons:hover{
+    opacity: 0.8;
 }
-#container{
-    text-align: center;
-    transform: translateY(300px)
+#clap{
+   
+    position: absolute;
+    margin-left: 80px;
+    margin-top:70px;
+    z-index: 100;
 }
-div#recordButtons button{
-    margin-left: 10px;
-    margin-right: 10px;
-}    
-kbd{
-    display: block;
-    text-align: center;
-    font-size: 30px;
-    transform: translate(0,50%);
+#hihat{
     
+    position: absolute;
+    margin-left: 330px;
+    margin-top:70px;
+    z-index: 100;
+}
+#ride{
+   
+    position: absolute;
+    margin-left: 430px;
+    margin-top:150px;
+    z-index: 95;
+}
+#openhat{
+   
+    margin-top:100px;
+    position: absolute;
+    margin-left: -40px;
+    margin-top:150px;
+    z-index: 95;
+}
+#tink{
+    
+    margin-top:100px;
+    position: absolute;
+    margin-left: 300px;
+    margin-top:200px;
+    z-index: 90;
+
+}
+#tom{
+    
+     position: absolute;
+     margin-left: 150px;
+     margin-top:200px;
+     z-index: 90;
+}
+#kick{
+    
+    position: absolute;
+     margin-left: 40px;
+     margin-top:320px;
+     z-index: 90;
+}
+#boom{
+  
+    z-index: 90;
+    position: absolute;
+    margin-top:10px;
+    margin-left: 200px;
+}
+#snare{
+    
+    z-index: 90;
+    position: absolute;
+    margin-top:320px;
+    margin-left: 377px;
+
+}
+.rec{
+    background: red;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+.play{
+    height: 0;
+    width: 0;
+    border-width: 0;
+    border-color: black;
+    background-color: black;
+    margin-right: 30px;
 }

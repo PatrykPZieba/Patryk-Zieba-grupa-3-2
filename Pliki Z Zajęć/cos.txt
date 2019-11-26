@@ -1,0 +1,3 @@
+const aktData = new Date() zapisuje datę 
+aktData.toLocaleDateString \
+https://github.com/lucia-gm/note-app

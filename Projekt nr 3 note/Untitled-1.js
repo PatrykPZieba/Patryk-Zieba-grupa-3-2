@@ -13,9 +13,7 @@ $(document).ready(function(){
         })
         localStorage.setItem("Notes-data" , JSON.stringify(notes));
     }
-    function loadInput(){
-        localStorage.getItem("Notes-data")
-    }
+    
     
 
     let noteCount = 0;

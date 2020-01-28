@@ -1,3 +1,4 @@
+
 function cleanTitle(){
     document.getElementById("titleinp").value="";
 }
@@ -10,13 +11,15 @@ function add(){
     var NoteTittle = document.getElementById("titleinp").value;
     var NoteColor = document.getElementById("topNote").style.backgroundColor;
     var NoteText = document.getElementById("textinp").value;
-    var NoteDate = new Date();
+    var data = new Date();
+    var dataText = data.toTimeString();
+    dataText = dataText.split(' ')[0];
     const Note = {
         NoteNumber: NoteNumber,
         NoteTittle: NoteTittle,
         NoteText: NoteText,
         NoteColor: NoteColor,
-        NoteDate: NoteDate
+        NoteDate: "Data Stworzenia:"+" "+ data.getDate()+"."+ data.getMonth()+1 +"."+ data.getFullYear()+ " " + dataText
     }
     localStorage.setItem(NoteNumber, JSON.stringify(Note));
     countNote();
@@ -32,10 +35,7 @@ function countNote(){
     }while(localStorage.getItem(i) != null)
     document.getElementById("Notecount").innerHTML=i;
 }
-function refresh(){
-    var x = document.getElementById("note");
-    x.removeChild(NoteList);
-}
+
 
 function loadNotes() {
     countNote();
@@ -66,18 +66,26 @@ function loadNotes() {
         let textinp = document.createElement("textarea");
         textinp.id = "textinp";
         textinp.style.width = "100%";
+
+        let DateInfo = document.createElement("div");
+        DateInfo.id="NoteDateInfo"
+        let Paragraph = document.createElement("p")
+        Paragraph.id="demo"
         
         textinp.disabled = true;
 
         note.appendChild(topNote);
         note.appendChild(botNote);
+        note.appendChild(DateInfo)
         topNote.appendChild(topTitleNote);
         botNote.appendChild(textinp);
+        DateInfo.appendChild(Paragraph);
         topTitleNote.appendChild(titleinp);
         document.body.appendChild(note)
         topNote.style.backgroundColor = JSON.parse(retrievedObject).NoteColor;
         titleinp.innerHTML = JSON.parse(retrievedObject).NoteTittle;
         textinp.value = JSON.parse(retrievedObject).NoteText;
+        Paragraph.innerHTML = JSON.parse(retrievedObject).NoteDate;
         note.style.float="left";
     }
 }

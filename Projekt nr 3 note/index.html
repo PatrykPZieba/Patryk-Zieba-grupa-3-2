@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="script.js"></script>
     <title>Notepad</title>
 </head>
 <body onload="loadNotes()">
@@ -29,7 +27,7 @@
         <div class="botNote">
 
             <div id="colorNote">
-                <div class="color" id="yellow" onclick="changeNoteColor(this)"></div>
+                <div class="color" id="orange" onclick="changeNoteColor(this)"></div>
                 <div class="color" id="green" onclick="changeNoteColor(this)"></div>
                 <div class="color" id="red" onclick="changeNoteColor(this)"></div>
                 <div class="color" id="blue" onclick="changeNoteColor(this)"></div>
@@ -41,7 +39,13 @@
             <textarea id="textinp" type="text"style="color: grey;" ></textarea>
 
         </div>
+        <div id="NoteDateInfo">
+            <p id="demo"></p>
+        </div>
     </div>
     <div id="Notecount" style="display: none;"></div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 body{
-    background-image: url(image/BG.jpg);
+    margin: 0;
 }
 .note{
     width: 23%;
@@ -23,12 +23,6 @@ body{
 }
 .topTitleNote{
     width: 80%;
-    float: left;
-    height: 100%;
-    text-align: center;
-}
-#topImportantNote{
-    width:10%;
     float: left;
     height: 100%;
     text-align: center;

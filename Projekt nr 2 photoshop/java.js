@@ -19,6 +19,7 @@ function appStart() {
     document.querySelector('#circle').addEventListener('click' , ()=>activateCircle())
     document.querySelector('#rectangle').addEventListener('click' , ()=>activateRect())
     document.querySelector('#clear').addEventListener('click' , ()=>clearCanvas())
+    document.querySelector("#add").addEventListener('click' , ()=>drawCanvasImage())
     drawCanvasImage()
 }
 function clearCanvas(){

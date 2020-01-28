@@ -11,20 +11,6 @@ body {
     transform: translateY(15px);
 
 }
-.square-brush-btn {
-   width: 25px;
-   height: 25px;
-   background: pink;
-   border: none;
-}
-.circle-brush-btn {
-   width: 25px;
-   height: 25px;
-   background: pink;
-   border: none;
-   border-radius: 50%;
-}
-
 .color{
     width: 25px;
     height: 25px;
@@ -35,7 +21,7 @@ body {
 }
 .filter-btn{
     width: 80px;
-    height: 30px;
+    height: 35px;
     display: block;
     margin: 30px auto 20px auto;
     border: 2px solid palevioletred;

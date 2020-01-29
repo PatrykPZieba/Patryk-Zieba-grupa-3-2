@@ -57,7 +57,7 @@ function contrastFilter (amount = 10) {
 }
 function activateCircle(){
     function draw(e) {
-        if(!isDrawing) return;
+      if(!isDrawing) return;
         ctx.beginPath();
         ctx.arc(e.offsetX, e.offsetY, 7.5, 0, Math.PI * 2, false);
         ctx.lineWidth = 5;
@@ -69,8 +69,8 @@ function activateCircle(){
         [lastX, lastY] = [e.offsetX, e.offsetY];
       });
       canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('mouseup', () => isDrawing = false);
-  canvas.addEventListener('mouseout', () => isDrawing = false);
+     canvas.addEventListener('mouseup', () => isDrawing = false);
+     canvas.addEventListener('mouseout', () => isDrawing = false);
 }
 function activateLine(){
     function draw(e) {

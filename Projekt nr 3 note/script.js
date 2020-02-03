@@ -35,9 +35,10 @@ function countNote(){
     }while(localStorage.getItem(i) != null)
     document.getElementById("Notecount").innerHTML=i;
 }
-function Del(){
-    let NoteList = document.getElementById("Notecount").innerHTML
-    localStorage.removeItem(localStorage.getItem(NoteList))
+function Del(item){
+  
+        localStorage.removeItem(item);
+        location.reload();
 }
 
 

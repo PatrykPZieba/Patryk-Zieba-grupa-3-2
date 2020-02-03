@@ -24,6 +24,12 @@ body{
     height: 100%;
     text-align: center;
 }
+.topDeleteNote{
+    width: 10%;
+    float: right;
+    height: 100%;
+    text-align: center;
+}
 .topTitleNote{
     width: 80%;
     float: left;

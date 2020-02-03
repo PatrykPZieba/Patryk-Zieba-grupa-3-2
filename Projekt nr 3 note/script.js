@@ -35,6 +35,10 @@ function countNote(){
     }while(localStorage.getItem(i) != null)
     document.getElementById("Notecount").innerHTML=i;
 }
+function Del(){
+    let NoteList = document.getElementById("Notecount").innerHTML
+    localStorage.removeItem(localStorage.getItem(NoteList))
+}
 
 
 function loadNotes() {
@@ -47,6 +51,16 @@ function loadNotes() {
 
         let topNote = document.createElement("div");
         topNote.id = "topNote";
+
+        let topDeleteDiv= document.createElement("div");
+        topDeleteDiv.className="topDeleteNote";
+
+        let topDelteNote = document.createElement("i");
+        topDelteNote.className="fas fa-times";
+        topDelteNote.onclick=Del();
+
+
+
         
         let topTitleNote = document.createElement("div");
         topTitleNote.className = "topTitleNote";
@@ -77,6 +91,8 @@ function loadNotes() {
         note.appendChild(topNote);
         note.appendChild(botNote);
         note.appendChild(DateInfo)
+        topNote.appendChild(topDeleteDiv);
+        topDeleteDiv.appendChild(topDelteNote);
         topNote.appendChild(topTitleNote);
         botNote.appendChild(textinp);
         DateInfo.appendChild(Paragraph);
@@ -87,5 +103,6 @@ function loadNotes() {
         textinp.value = JSON.parse(retrievedObject).NoteText;
         Paragraph.innerHTML = JSON.parse(retrievedObject).NoteDate;
         note.style.float="left";
+        
     }
 }

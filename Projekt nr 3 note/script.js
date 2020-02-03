@@ -1,4 +1,3 @@
-
 function cleanTitle(){
     document.getElementById("titleinp").value="";
 }
@@ -37,7 +36,7 @@ function countNote(){
 }
 function Del(item){
   
-        localStorage.removeItem(item);
+        localStorage.removeItem(item.id);
         location.reload();
 }
 
@@ -57,8 +56,7 @@ function loadNotes() {
         topDeleteDiv.className="topDeleteNote";
 
         let topDelteNote = document.createElement("i");
-        topDelteNote.className="fas fa-times";
-        topDelteNote.onclick=Del();
+        topDelteNote.innerHTML="<i class=\"fas fa-times\" id=\""+NoteList+"\" onclick=\"Del(this)\"></i>";
 
 
 

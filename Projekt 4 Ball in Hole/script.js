@@ -41,18 +41,18 @@ function restart(){                                 // funkcja restartu gry
 
 function zmianaPolozenia(e){            // Funkcja napędu kulki z żyroskopu
     console.log(e);
-    speedX=e.gamma/2
-    speedY=e.beta/2
+    speedX=e.gamma/5
+    speedY=e.beta/5
 }
 function poruszKulke(){                 // funkcja poruszania kulki
     
     
 
-    if(posX+speedX<window.innerWidth-50 && posX+speedX>0){  // ograniczenia kulki
+    if(posX+speedX<window.innerWidth && posX+speedX>0){  // ograniczenia kulki
         posX+=speedX;
         ball.style.left=posX+'px';        
     }
-    if(posY+speedY<window.innerHeight-50 && posY+speedY>0){
+    if(posY+speedY<window.innerHeight && posY+speedY>0){
         posY+=speedY;
         ball.style.top=posY+'px';        
     }

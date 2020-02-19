@@ -82,8 +82,8 @@ function poruszKulke(){                 // funkcja poruszania kulki
         window.requestAnimationFrame(poruszKulke)
     }
 }
-function spawnHoles(){                                  //Dodanie dziur w zależności od rozmiaru ekranu
-    for(i=2;i<(window.innerWidth/100);i++){
+function spawnHoles(){                                 
+    for(i=1;i<(window.innerWidth/100);i++){
         let hole = document.createElement('div');
         hole.classList.add("dziura");
         hole.style.left=100*i+Math.random()*75-95+'px';
@@ -91,19 +91,12 @@ function spawnHoles(){                                  //Dodanie dziur w zależ
         holes.push(hole);
         container.appendChild(hole);
     }
-    for(i=1;i<(window.innerWidth/100);i++){
-        let hole = document.createElement('div');
-        hole.classList.add("dziura");
-        hole.style.left=100*i+Math.random()*75-95+'px';
-        hole.style.top=Math.random()*(window.innerHeight)/2+window.innerHeight/2-100+'px';
-        holes.push(hole);
-        container.appendChild(hole);
-    }
+   
     checkHoles();
     randomGoodHole(1);
 }
-function checkHoles(){                                      //Lepsze rozmieszczenie dziur
-    for(i=0;i<holes.length-1;i++){                          // (Pozbycie się wiekszości dziur syjamskich)
+function checkHoles(){                                      
+    for(i=0;i<holes.length-1;i++){                         
         for(j=i+1;j<holes.length;j++){
             if(holes[j].style.left.slice(0,-2)>holes[i].style.left.slice(0,-2)+75
             &&holes[j].style.top.slice(0,-2)>holes[i].style.top.slice(0,-2)+75){
